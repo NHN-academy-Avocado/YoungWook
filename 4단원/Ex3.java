@@ -23,7 +23,7 @@ public class Ex3 {
 
 
         System.out.println((a + b) / 2);  //합을 2로 나누기
-        System.out.println("A와B 의 기하평균: " + Asquare_root);  //각각의 기하평균
+        System.out.println("A와B 의 기하평균: " + Asquare_root);  // 기하평균
         System.out.println("BIG:" + BIG + "||" + "MIN:" + MIN);  //두 수중 가 큰 수와 작은 수 출력
         System.exit(0);
     }
