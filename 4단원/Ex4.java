@@ -10,6 +10,6 @@ public class Ex4 {
     }
 
     public static void main(String[] args) {
-        even(4);
+        System.out.println(even(4));
     }
 }

@@ -8,7 +8,7 @@ public class Ex10 {
     }
 
     public static char lastCharacter2(String s) {
-        char last = s.charAt(s.length());
+        char last = s.charAt(s.length() - 1);
 
         return last;
     }

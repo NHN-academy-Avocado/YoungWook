@@ -4,7 +4,7 @@ public class Ex9 { //Producrt Testing
         Product lamp = new Product("Lamp 60 Watt");
         System.out.println("Before the loading: " + lamp);
         lamp.download(1000);
-        lamp.Upload(100);
+        lamp.upload(100);
         System.out.println("After the loading: " + lamp);
     }
 }
