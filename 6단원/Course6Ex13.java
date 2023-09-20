@@ -5,6 +5,28 @@ public class Course6Ex13 {//입력에서 정수 n을 읽고 처음 n개의 소�
     public static void primeprint() {
         String a = JOptionPane.showInputDialog("input number:");
         int n = Integer.parseInt(a);
+        int count = 0;
 
+        System.out.println(n + " Prime Numbers:");
+        for (int i = 2; i <= n; i++) {
+            count = 0;
+            for (int j = 1; j <= i; j++) {
+                if (i % j == 0) {
+                    count++;
+                }
+
+
+            }
+            if (count == 2) {
+                System.out.print(i + " ");
+            }
+
+        }
+    }
+
+    public static void main(String[] args) {
+        primeprint();
     }
 }
+
+

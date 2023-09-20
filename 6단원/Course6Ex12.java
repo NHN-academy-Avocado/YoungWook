@@ -5,8 +5,8 @@ public class Course6Ex12 {
     public static void prime() {
         String a = JOptionPane.showInputDialog("input number:");
         int n = Integer.parseInt(a);
-        boolean[] isPrime = new boolean[n + 1];
-        for (int i = 2; i <= n; i++) {
+        boolean[] isPrime = new boolean[n + 1]; //수가 소수일 때 True를 저장
+        for (int i = 2; i <= n; i++) {  //초기화?
             isPrime[i] = true;
         }
         for (int p = 2; p * p <= n; p++) {
@@ -19,7 +19,7 @@ public class Course6Ex12 {
         }
         System.out.println("Primes " + n + ":");
         for (int i = 2; i <= n; i++) {
-            if (isPrime[i]) {
+            if (isPrime[i]) { // 각각 트루인 i=소수를 출력
                 System.out.print(i + " ");
             }
         }
