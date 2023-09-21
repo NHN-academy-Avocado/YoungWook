@@ -44,7 +44,7 @@ public class Course7Ex6 {
         int distinctValues = numberOfDistinctValues(A);
         int duplicates = numberOfDuplicates(A);
 
-        System.out.println("Number of distinct values in array A: " + distinctValues);
-        System.out.println("Number of duplicate values in array A: " + duplicates);
+        System.out.println("distinct values in array A: " + distinctValues);
+        System.out.println("duplicate values in array A: " + duplicates);
     }
 }

@@ -21,12 +21,11 @@ public class Course7Ex7 {
             }
         }
 
-        int[] result = Arrays.copyOf(A, uniqueCount);
-        return result;
+        return Arrays.copyOf(A, uniqueCount);
     }
 
     public static void main(String[] args) {
-        int[] A = {1, 2, 2, 3, 3, 3, 4, 5, 5};
+        int[] A = {8, 2, 7, 3, 7, 3, 4, 5,};
 
         int[] uniqueArray = removeDuplicates(A);
 

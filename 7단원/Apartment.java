@@ -6,24 +6,23 @@ public class Apartment {
     }
 
     private int size;
-
-    public Apartment(String address) {
-        this.address = address;
-    }
-
+    private ArrayList<String> residents; //Array list 생성 없이 만들어보기
     private String address;
-
-    public int getResidentsNum() {
-        return residents.size();
-    }
-
-    private ArrayList<String> residents;
 
     public Apartment(int size, String address) {
         this.size = size;
         this.address = address;
         this.residents = new ArrayList<>();
     }
+
+    public Apartment(String address) {
+        this.address = address;
+    }
+
+    public int getResidentsNum() {
+        return residents.size();
+    }
+
 
     public void addResident(String name) {
         if (residents.size() < 10) {
@@ -42,9 +41,6 @@ public class Apartment {
     public void removeResident(int number) {
         if (number >= 0 && number < residents.size()) {
             residents.remove(number);
-            for (int i = number; i < residents.size(); i++) {
-                residents.set(i, residents.get(i));
-            }
         }
 
     }
@@ -52,8 +48,8 @@ public class Apartment {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Apartment Information:\n");
-        sb.append("Size: ").append(size).append(" square meters\n");
+        sb.append("Apartment Info:\n");
+        sb.append("Size: ").append(size).append(" \n");
         sb.append("Address: ").append(address).append("\n");
         sb.append("Residents:\n");
         for (int i = 0; i < residents.size(); i++) {
