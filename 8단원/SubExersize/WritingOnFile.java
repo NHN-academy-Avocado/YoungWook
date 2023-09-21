@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 
 public class WritingOnFile {
     public static void main(String[] args) throws IOException {
-        FileWriter f = new FileWriter("test.text", true);
+        FileWriter f = new FileWriter(",.txt", true);
         PrintWriter out = new PrintWriter(f);
 
         out.println("Welcome new user");
