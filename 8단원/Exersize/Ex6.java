@@ -1,5 +1,9 @@
 package Exersize;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 public class Ex6 {
 
     //텍스트 파일에 대한 일부 기능을 내보내는 IOFile 클래스를 구현합니다.
@@ -10,4 +14,18 @@ public class Ex6 {
 //    void print() : 사용하여 파일의 콘텐츠를 동영상에 인쇄합니다;
 //    void copy(String filename) : 파일 이름으로 지정된 파일에 파일의 내용을 복사합니다;
 //    void delete() : 저장소에서 파일을 삭제합니다.
+    public static void main(String[] args) throws IOException {
+//        String filename = JOptionPane.showInputDialog("Input Filename: ");
+//        FileReader f = new FileReader(filename);
+//        BufferedReader input = new BufferedReader(f);
+//        IOFile.setInput(input);
+//        System.out.println(IOFile.countLines());
+        File fout = new File("OutputEx6.txt");
+        FileOutputStream fileos = new FileOutputStream(fout);
+        IOFile.write(fileos);
+        fileos.close();
+
+    }
+
+
 }
