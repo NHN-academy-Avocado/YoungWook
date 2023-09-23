@@ -1,4 +1,4 @@
-package Exersize;
+package Course8.Exersize;
 
 public class Ex8 {
     //연습 7.12의 Apartment 클래스에 파일명을 매개변수로 받아 아파트에 대한 데이터를 파일에 저장하는 공용 메서드 saveToFile을 추가합니다.

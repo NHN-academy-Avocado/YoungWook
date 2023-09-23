@@ -1,4 +1,4 @@
-package Exersize;
+package Course8.Exersize;
 
 import java.io.BufferedReader;
 import java.io.IOException;

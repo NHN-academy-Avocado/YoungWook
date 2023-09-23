@@ -1,4 +1,4 @@
-package Exersize;
+package Course8.Exersize;
 
 public class Ex9 {
     //실수의 2차원 행렬을 나타내는 Java 클래스 Matrix를 구현합니다. 이 클래스는 다음 메서드를 내보내야 합니다:
