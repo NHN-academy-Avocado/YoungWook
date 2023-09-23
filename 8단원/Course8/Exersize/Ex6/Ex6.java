@@ -1,4 +1,4 @@
-package Course8.Exersize;
+package Course8.Exersize.Ex6;
 
 import java.io.IOException;
 

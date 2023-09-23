@@ -1,4 +1,4 @@
-package Course8.Exersize;
+package Course8.Exersize.Ex7;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

@@ -1,4 +1,4 @@
-package Course8.Exersize;
+package Course8.Exersize.Ex7;
 
 public class Ex7 {
     //단원 4와 5에서와 같이 은행 계좌 집합을 처리하는 HandleBAs 클래스를 구현합니다.
