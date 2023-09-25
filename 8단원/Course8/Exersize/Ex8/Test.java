@@ -10,7 +10,7 @@ public class Test {
 
         System.out.println(myApartment);
 
-        System.out.println("Residents Num: " + myApartment.getResidentsNum());
+//        System.out.println("Residents Num: " + myApartment.getResidentsNum());
 //        System.out.println("Resident 1: " + myApartment.getResidentName(1));
 //
 //        myApartment.removeResident(2);
