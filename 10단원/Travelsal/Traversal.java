@@ -34,7 +34,7 @@ public class Traversal {
         return visited[r][c];
     }
 
-    public String toString() {
+    public String toString() { //Ex7
         StringBuilder res = new StringBuilder();
         for (int r = 0; r < moor.length; r++) {
             for (int c = 0; c < moor[0].length; c++) {
@@ -45,7 +45,7 @@ public class Traversal {
         return res.toString();
     }
 
-    public void searchTraversal(int r, int c) {
+    public void searchTraversal(int r, int c) { //Ex8
         if (!land(r, c) || isVisited(r, c)) {
             return;
         }
@@ -56,7 +56,7 @@ public class Traversal {
         searchTraversal(r + 1, c);
         searchTraversal(r, c - 1);
         searchTraversal(r, c + 1);
-        searchTraversal(r - 1, c - 1);
+        searchTraversal(r - 1, c - 1); //Ex9
         searchTraversal(r - 1, c + 1);
         searchTraversal(r + 1, c - 1);
         searchTraversal(r + 1, c + 1);
