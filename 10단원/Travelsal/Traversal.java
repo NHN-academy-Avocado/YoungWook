@@ -38,6 +38,7 @@ public class Traversal {
         StringBuilder res = new StringBuilder();
         for (int r = 0; r < moor.length; r++) {
             for (int c = 0; c < moor[0].length; c++) {
+                res.append("\t");
                 res.append(land(r, c) ? (visited[r][c] ? "#" : "*") : "o");
             }
             res = res.append("\n");
