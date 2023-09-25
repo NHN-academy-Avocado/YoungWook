@@ -38,9 +38,9 @@ public class Apartment {
         }
     }
 
-    public String getResidentName(int number) {
-
-    }
+//    public String getResidentName(int number) {
+//
+//    }
 
     public void removeResident(int number) {
 
