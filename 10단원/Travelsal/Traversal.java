@@ -1,47 +1,66 @@
 package Travelsal;
 
 public class Traversal {
-    private char[][] moor;
-    private int startX;
-    private int startY;
 
-    public Traversal(char[][] moor, int startX, int startY) {
-        this.moor = moor;
-        this.startX = startX;
-        this.startY = startY;
+    private boolean[][] moor;
+
+    private boolean[][] visited;
+
+
+    public Traversal(int rows, int colums, double probLand) {
+        this.moor = new boolean[rows][colums];
+        this.visited = new boolean[rows][colums];
+        for (int r = 0; r < rows; r++) {
+            for (int c = 0; c < colums; c++) {
+                moor[r][c] = (Math.random() < probLand);
+            }
+        }
+    }
+
+
+    public boolean land(int r, int c) {
+        return (r >= 0) && (r < moor.length) &&
+                (c >= 0) && (c < moor[0].length) &&
+                moor[r][c];
+    }
+
+    public void markVisited(int r, int c) {
+        if (land(r, c)) {
+            visited[r][c] = true;
+        }
+    }
+
+    public boolean isVisited(int r, int c) {
+        return visited[r][c];
     }
 
     public String toString() {
-        StringBuilder result = new StringBuilder();
-
-        // Loop through the moor and build the result string
-        for (int row = 0; row < moor.length; row++) {
-            for (int col = 0; col < moor[row].length; col++) {
-                char cell = moor[row][col];
-                if (cell == 'o') {
-                    result.append('o'); // Water zone
-                } else if (cell == '#') {
-                    result.append('#'); // Land zone belonging to traversal
-                } else {
-                    result.append('*'); // Remaining land zone
-                }
+        StringBuilder res = new StringBuilder();
+        for (int r = 0; r < moor.length; r++) {
+            for (int c = 0; c < moor[0].length; c++) {
+                res.append(land(r, c) ? (visited[r][c] ? "#" : "*") : "o");
             }
-            result.append('\n'); // Newline at the end of each row
+            res = res.append("\n");
+        }
+        return res.toString();
+    }
+
+    public void searchTraversal(int r, int c) {
+        if (!land(r, c) || isVisited(r, c)) {
+            return;
         }
 
-        return result.toString();
+        markVisited(r, c);
+
+        searchTraversal(r - 1, c);
+        searchTraversal(r + 1, c);
+        searchTraversal(r, c - 1);
+        searchTraversal(r, c + 1);
+        searchTraversal(r - 1, c - 1);
+        searchTraversal(r - 1, c + 1);
+        searchTraversal(r + 1, c - 1);
+        searchTraversal(r + 1, c + 1);
     }
 
-    public static void main(String[] args) {
-        char[][] moor = {
-                {'o', 'o', 'o', '#', 'o'},
-                {'o', 'o', '#', 'o', 'o'},
-                {'o', 'o', 'o', 'o', 'o'},
-                {'o', '#', 'o', 'o', 'o'},
-                {'o', 'o', 'o', 'o', 'o'}
-        };
 
-        Traversal traversal = new Traversal(moor, 2, 2);
-        System.out.println(traversal.toString());
-    }
 }
