@@ -7,13 +7,19 @@ import java.util.Collections;
 public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
         ArrayList<Integer> numbers = new ArrayList<>();
-        while (br.readLine().isBlank()){
-            numbers.add()
+        for (int i = 0; i < N; i++) {
+            numbers.add(Integer.parseInt(br.readLine()));
         }
         Collections.sort(numbers);
-        for (int i = 0; i <numbers.size() ; i++) {
-            System.out.println(numbers.get(i));
+        StringBuilder st = new StringBuilder();
+        for (int w : numbers) {
+            st.append(w);
+            st.append("\n");
         }
+        System.out.println(st.toString());
+
     }
 }
+
