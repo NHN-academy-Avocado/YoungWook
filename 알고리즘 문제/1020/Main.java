@@ -8,28 +8,28 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int num = Integer.parseInt(br.readLine());
-        int[] arr = new int[num];
+        int N = Integer.parseInt(br.readLine());
+        int[] arr = new int[N];
 
         int val = 0;
         StringBuilder sb = new StringBuilder();
         StringTokenizer st = new StringTokenizer(br.readLine());
-        for (int i = 0; i < num; i++) {
+        for (int i = 0; i < N; i++) {
             arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        int num1 = Integer.parseInt(br.readLine());
-        int[] arr1 = new int[num1];
+        int M = Integer.parseInt(br.readLine());
+        int[] arr1 = new int[M];
         st = new StringTokenizer(br.readLine());
-        for (int i = 0; i < num1; i++) {
+        for (int i = 0; i < M; i++) {
             arr1[i] = Integer.parseInt(st.nextToken());
         }
         Arrays.sort(arr);
 
         int j = 0;
         //이진 검색 트리
-        for (int k = 0; k < num1; k++) {
-            int high = num - 1;
+        for (int k = 0; k < M; k++) {
+            int high = N - 1;
             int low = 0;
 
             while (low <= high) {
