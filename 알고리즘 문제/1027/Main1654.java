@@ -1,9 +1,5 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.StringTokenizer;
 
 public class Main1654 {
     public static void main(String[] args) {
@@ -40,81 +36,7 @@ public class Main1654 {
 }
 //재출 답안
 
-import java.io.BufferedReader;
-        import java.io.IOException;
-        import java.io.InputStreamReader;
-        import java.util.StringTokenizer;
 
-public class Main {
-
-    public static int k, n, max;
-
-    public static int[] arr, answer;
-
-    public static StringBuilder sb = new StringBuilder();
-
-    public static void main(String[] args) throws IOException {
-
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
-        StringTokenizer st = null;
-
-        st = new StringTokenizer(br.readLine());
-
-        k = Integer.parseInt(st.nextToken());
-
-        n = Integer.parseInt(st.nextToken());
-
-        arr = new int[k];
-
-        for (int i = 0; i < k; i++) {
-
-            arr[i] = Integer.parseInt(br.readLine());
-
-            max = Math.max(max, arr[i]);
-
-        }
-
-
-        binarySearch();
-
-    }
-
-    public static void binarySearch() {
-
-        long start = 1;
-
-        long end = max;
-
-        while (start <= end) {
-
-            long mid = (start + end) / 2;
-
-            long count = 0;
-
-            for (int i = 0; i < k; i++) {
-
-                count += arr[i] / mid;
-
-            }
-
-            if (count < n) {
-
-                end = mid - 1;
-
-            } else if (count >= n) {
-
-                start = mid + 1;
-
-            }
-
-        }
-
-        System.out.println(end);
-
-    }
-
-}
 //***
 // import java.io.BufferedReader;
 //import java.io.IOException;
